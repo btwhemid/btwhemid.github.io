@@ -1323,12 +1323,15 @@ body {
 #top-text {
   position: fixed;
   top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(24px, 5vw, 48px);
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif; /* Replace with 'Google Sans' if available */
+  font-size: clamp(24px, 5vw, 48px); /* Responsive size for main text */
   z-index: 1000;
-  animation: fadeIn 1s ease-in;
+  animation: fadeIn 1s ease-in; /* One-time fade-in for the whole container */
 }
 
 /* Fade-in animation (runs only once) */
@@ -1351,8 +1354,9 @@ body {
 /* Neon pink styling with subtle sparkle */
 .neon-pink {
   color: #FF00FF;
-  text-shadow: 0 0 5px #FF00FF, 0 0 10px #FF00FF, 0 0 15px #FF00FF;
+  text-shadow: 0 0 10px #FF00FF, 0 0 15px #FF00FF, 0 0 20px #FF00FF;
   animation: sparkle-pink 1s infinite;
+  font-size: 36px
 }
 
 /* Subtle sparkle animation for neon blue */
@@ -1367,6 +1371,16 @@ body {
   0% { text-shadow: 0 0 5px #FF00FF, 0 0 10px #FF00FF, 0 0 15px #FF00FF; }
   50% { text-shadow: 0 0 10px #FF00FF, 0 0 15px #FF00FF, 0 0 20px #FF00FF; }
   100% { text-shadow: 0 0 5px #FF00FF, 0 0 10px #FF00FF, 0 0 15px #FF00FF; }
+}
+
+/* Lorem ipsum text styling */
+.lorem-text {
+  width: 80vw; /* Limits width to 80% of viewport for readability */
+  margin-top: 20px; /* Adds margin between main text and lorem text */
+  color: white;
+  font-size: clamp(16px, 3vw, 24px); /* Smaller responsive font size */
+  text-shadow: 0 0 5px white, 0 0 10px white; /* Static glitter-like glow */
+  text-align: center; /* Centers the text within the paragraph */
 }
 
 /* Optional: Basic container styling (add your existing styles here if needed) */
